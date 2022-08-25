@@ -1,0 +1,190 @@
+:root {
+    --mainbg: hsl(222, 26%, 31%);
+    --toggle-background-and-keypad-background: hsl(223, 31%, 20%);
+    --screenbg: hsl(224, 36%, 15%);
+    --mid-key: hsl(225, 21%, 49%);
+    --mid-key-shadow: hsl(224, 28%, 35%);
+    --normal-key: hsl(30, 25%, 89%);
+    --normal-key-shadow: hsl(28, 16%, 65%);
+    --equal: hsl(6, 63%, 50%);
+    --equal-shadow: hsl(6, 70%, 34%);
+    --text: hsl(221, 14%, 31%);
+    ---heading: #fff;
+}
+
+* {
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+html {
+    font-size: 58.5%;
+    background-color: var(--mainbg);
+}
+
+html[data-theme="theme-2"] {
+    --mainbg: hsl(0, 0%, 90%);
+    --toggle-background-and-keypad-background: hsl(0, 5%, 81%);
+    --screenbg: hsl(0, 0%, 93%);
+    --mid-key: hsl(185, 42%, 37%);
+    --mid-key-shadow: hsl(185, 58%, 25%);
+    --normal-key: hsl(45, 7%, 89%);
+    --normal-key-shadow: hsl(35, 11%, 61%);
+    --equal: hsl(25, 98%, 40%);
+    --equal-shadow: hsl(25, 99%, 27%);
+    --text: hsl(60, 10%, 19%);
+    ---heading: hsl(60, 10%, 19%);
+}
+
+html[data-theme="theme-3"] {
+    --mainbg: hsl(268, 75%, 9%);
+    --toggle-background-and-keypad-background: hsl(268, 71%, 12%);
+    --screenbg: hsl(268, 71%, 12%);
+    --mid-key: hsl(281, 89%, 26%);
+    --mid-key-shadow: hsl(285, 91%, 52%);
+    --normal-key: hsl(268, 47%, 21%);
+    --normal-key-shadow: hsl(290, 70%, 36%);
+    --equal: hsl(176, 100%, 44%);
+    --equal-shadow: hsl(185, 58%, 25%);
+    --text: hsl(52, 100%, 62%);
+    ---heading: hsl(52, 100%, 62%);
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--mainbg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    width: 95%;
+    max-width: 470px;
+}
+
+.upper {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper h1 {
+    color: var(---heading);
+    font-size: 3rem;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+}
+
+.numbers {
+    display: flex;
+    font-size: 12px;
+    color: var(---heading);
+    justify-content: space-around;
+    margin-bottom: 8px;
+}
+
+.toggle-section {
+    width: 76px;
+    background-color: var(--toggle-background-and-keypad-background);
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.left {
+    margin-right: 2.5rem;
+    font-size: 12px;
+    color: var(---heading);
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: var(--equal);
+}
+
+input {
+    padding: 2rem 4rem;
+    background-color: var(--screenbg);
+    width: 100%;
+    font-size: 4rem;
+    border: none;
+    outline: none;
+    text-align: right;
+    border-radius: 10px;
+    font-weight: 800;
+    color: var(---heading);
+}
+
+.keypad {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--toggle-background-and-keypad-background);
+    border-radius: 10px;
+}
+
+.keypad button {
+    margin: 1rem;
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.number {
+    background-color: var(--normal-key);
+    padding: 14px 0;
+    box-shadow: var(--normal-key-shadow) 0px 2.5px 3px;
+    color: var(--text);
+}
+
+.reset {
+    grid-column: 1/3;
+}
+
+.reset,
+.del {
+    background-color: var(--mid-key);
+    box-shadow: var(--mid-key-shadow) 0px 2.5px 3px;
+    color: #fff;
+}
+
+.equal {
+    grid-column: 3/5;
+    background-color: var(--equal);
+    box-shadow: var(--equal-shadow) 0px 2.5px 3px;
+}
+
+.reset,
+.equal {
+    padding: 2rem 0;
+    color: white;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+@media (max-width:550px) {
+    html {
+        font-size: 50%;
+    }
+}

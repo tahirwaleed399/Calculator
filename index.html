@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="theme-1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 8px;
+            text-align: center;
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="calculator">
+            <div class="upper">
+                <h1>Calc</h1>
+                <div class="toggle">
+                    <div class="left">
+                        Theme
+                    </div>
+                    <div class="right">
+                        <div class="numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <div class="toggle-section">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input">
+                <input type="text" readonly>
+            </div>
+            <div class="keypad">
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="del">Del</button>
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="number">+</button>
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="number">-</button>
+                <button class="number">.</button>
+                <button class="number">0</button>
+                <button class="number">/</button>
+                <button class="number">X</button>
+                <button class="big reset">Reset</button>
+                <button class="big equal" disabled>=</button>
+
+            </div>
+        </section>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Ch Waleed Tahir</a>.
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
